@@ -1,7 +1,8 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
-/*@import '@fontsource/space-grotesk/700.css'; /* For bold headings */*/
+/*@import '@fontsource/space-grotesk/700.css'; /* For bold headings */
+*/
 /*@import '@fontsource/inter/400.css'; /* Regular body text */*/
 /*@import '@fontsource/inter/500.css'; /* Medium body text */*/
 /*@import '@fontsource/jetbrains-mono/400.css'; /* For tech keywords */*/
@@ -9,54 +10,54 @@
 /* 1. Map CSS variables to Tailwind v4 theme engine */
 /* Shadcn components rely on these exact Tailwind color names */
 @theme {
-    /* Override default sans with Inter, fallback to standard sans */
-    /*--font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;*/
-    /* Create a custom utility for headings */
-    /*--font-heading: 'Space Grotesk', sans-serif;*/
-    /* Override default mono */
-    /*--font-mono: 'JetBrains Mono', ui-monospace, monospace;*/
+	/* Override default sans with Inter, fallback to standard sans */
+	/*--font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;*/
+	/* Create a custom utility for headings */
+	/*--font-heading: 'Space Grotesk', sans-serif;*/
+	/* Override default mono */
+	/*--font-mono: 'JetBrains Mono', ui-monospace, monospace;*/
 
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
 
-    --color-card: var(--card);
-    --color-card-foreground: var(--card-foreground);
+	--color-card: var(--card);
+	--color-card-foreground: var(--card-foreground);
 
-    --color-popover: var(--popover);
-    --color-popover-foreground: var(--popover-foreground);
+	--color-popover: var(--popover);
+	--color-popover-foreground: var(--popover-foreground);
 
-    --color-primary: var(--primary);
-    --color-primary-foreground: var(--primary-foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
 
-    --color-secondary: var(--secondary);
-    --color-secondary-foreground: var(--secondary-foreground);
+	--color-secondary: var(--secondary);
+	--color-secondary-foreground: var(--secondary-foreground);
 
-    --color-muted: var(--muted);
-    --color-muted-foreground: var(--muted-foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
 
-    --color-accent: var(--accent);
-    --color-accent-foreground: var(--accent-foreground);
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
 
-    --color-destructive: var(--destructive);
-    --color-destructive-foreground: var(--destructive-foreground);
+	--color-destructive: var(--destructive);
+	--color-destructive-foreground: var(--destructive-foreground);
 
-    --color-border: var(--border);
-    --color-input: var(--input);
-    --color-ring: var(--ring);
+	--color-border: var(--border);
+	--color-input: var(--input);
+	--color-ring: var(--ring);
 
-    --radius-sm: calc(var(--radius) - 4px);
-    --radius-md: calc(var(--radius) - 2px);
-    --radius-lg: var(--radius);
+	--radius-sm: calc(var(--radius) - 4px);
+	--radius-md: calc(var(--radius) - 2px);
+	--radius-lg: var(--radius);
 
-    /* System Feedback States */
-    --color-success: var(--success);
-    --color-success-foreground: var(--success-foreground);
+	/* System Feedback States */
+	--color-success: var(--success);
+	--color-success-foreground: var(--success-foreground);
 
-    --color-warning: var(--warning);
-    --color-warning-foreground: var(--warning-foreground);
+	--color-warning: var(--warning);
+	--color-warning-foreground: var(--warning-foreground);
 
-    --color-info: var(--info);
-    --color-info-foreground: var(--info-foreground);
+	--color-info: var(--info);
+	--color-info-foreground: var(--info-foreground);
 }
 
 /* Instructs Tailwind to apply 'dark:' utilities when the .dark class is on a parent */
@@ -64,98 +65,98 @@
 
 /* 2. Define the exact Shadcn variables with your Purple Theme */
 @layer base {
-    :root {
-        /* SURFACES: Notice how background is 96%, but the card bumps UP to 100% for elevation */
-        --background: 255 5% 96%;           /* hsl(255, 5%, 96%) */
-        --card: 255 5% 100%;                /* hsl(255, 5%, 100%) - Pure white card */
-        --popover: 255 5% 100%;             /* hsl(255, 5%, 100%) - Dropdowns */
+	:root {
+		/* SURFACES: Notice how background is 96%, but the card bumps UP to 100% for elevation */
+		--background: 255 5% 96%; /* hsl(255, 5%, 96%) */
+		--card: 255 5% 100%; /* hsl(255, 5%, 100%) - Pure white card */
+		--popover: 255 5% 100%; /* hsl(255, 5%, 100%) - Dropdowns */
 
-        /* CONTENT: Deep, legible dark purple/gray text */
-        --foreground: 255 10% 10%;          /* hsl(255, 10%, 10%) */
-        --card-foreground: 255 10% 10%;     /* hsl(255, 10%, 10%) */
-        --popover-foreground: 255 10% 10%;  /* hsl(255, 10%, 10%) */
+		/* CONTENT: Deep, legible dark purple/gray text */
+		--foreground: 255 10% 10%; /* hsl(255, 10%, 10%) */
+		--card-foreground: 255 10% 10%; /* hsl(255, 10%, 10%) */
+		--popover-foreground: 255 10% 10%; /* hsl(255, 10%, 10%) */
 
-        /* MUTED/HIGHLIGHTS: Interactive states and disabled areas (The 90% goes here, not on cards) */
-        --muted: 255 5% 90%;                /* hsl(255, 5%, 90%) */
-        --muted-foreground: 255 5% 40%;     /* hsl(255, 5%, 40%) */
-        --accent: 255 5% 90%;               /* hsl(255, 5%, 90%) - Hover states on ghost buttons */
-        --accent-foreground: 255 10% 10%;   /* hsl(255, 10%, 10%) */
+		/* MUTED/HIGHLIGHTS: Interactive states and disabled areas (The 90% goes here, not on cards) */
+		--muted: 255 5% 90%; /* hsl(255, 5%, 90%) */
+		--muted-foreground: 255 5% 40%; /* hsl(255, 5%, 40%) */
+		--accent: 255 5% 90%; /* hsl(255, 5%, 90%) - Hover states on ghost buttons */
+		--accent-foreground: 255 10% 10%; /* hsl(255, 10%, 10%) */
 
-        /* BRAND: Your vibrant purple */
-        --primary: 255 86% 63%;             /* hsl(255, 86%, 63%) */
-        --primary-foreground: 0 0% 100%;    /* hsl(0, 0%, 100%) - Pure white text on purple button */
+		/* BRAND: Your vibrant purple */
+		--primary: 255 86% 63%; /* hsl(255, 86%, 63%) */
+		--primary-foreground: 0 0% 100%; /* hsl(0, 0%, 100%) - Pure white text on purple button */
 
-        /* SECONDARY: A softer alternative action button */
-        --secondary: 256 100% 87%;          /* hsl(256, 100%, 87%) */
-        --secondary-foreground: 255 10% 10%;/* hsl(255, 10%, 10%) - Dark text on light purple button */
+		/* SECONDARY: A softer alternative action button */
+		--secondary: 256 100% 87%; /* hsl(256, 100%, 87%) */
+		--secondary-foreground: 255 10% 10%; /* hsl(255, 10%, 10%) - Dark text on light purple button */
 
-        /* UTILITIES */
-        --border: 255 5% 82%;               /* hsl(255, 5%, 82%) */
-        --input: 255 5% 82%;                /* hsl(255, 5%, 82%) */
-        --ring: 255 86% 63%;                /* hsl(255, 86%, 63%) - Focus rings match primary */
-        --destructive: 0 84.2% 60.2%;       /* hsl(0, 84.2%, 60.2%) - A standard stark red */
-        --destructive-foreground: 0 0% 100%;/* hsl(0, 0%, 100%) - White text on red */
+		/* UTILITIES */
+		--border: 255 5% 82%; /* hsl(255, 5%, 82%) */
+		--input: 255 5% 82%; /* hsl(255, 5%, 82%) */
+		--ring: 255 86% 63%; /* hsl(255, 86%, 63%) - Focus rings match primary */
+		--destructive: 0 84.2% 60.2%; /* hsl(0, 84.2%, 60.2%) - A standard stark red */
+		--destructive-foreground: 0 0% 100%; /* hsl(0, 0%, 100%) - White text on red */
 
-        /* SUCCESS (Green) - For confirmations, completed statuses */
-        --success: 142.1 76.2% 36.3%;       /* hsl(142.1, 76.2%, 36.3%) */
-        --success-foreground: 255 5% 100%;  /* hsl(255, 5%, 100%) - White text */
+		/* SUCCESS (Green) - For confirmations, completed statuses */
+		--success: 142.1 76.2% 36.3%; /* hsl(142.1, 76.2%, 36.3%) */
+		--success-foreground: 255 5% 100%; /* hsl(255, 5%, 100%) - White text */
 
-        /* WARNING (Yellow/Orange) - For cautions, pending statuses */
-        --warning: 38 92% 50%;              /* hsl(38, 92%, 50%) */
-        --warning-foreground: 255 10% 10%;  /* hsl(255, 10%, 10%) - Dark text on yellow for contrast */
+		/* WARNING (Yellow/Orange) - For cautions, pending statuses */
+		--warning: 38 92% 50%; /* hsl(38, 92%, 50%) */
+		--warning-foreground: 255 10% 10%; /* hsl(255, 10%, 10%) - Dark text on yellow for contrast */
 
-        /* INFO (Blue) - For general tips, active processing */
-        --info: 217.2 91.2% 59.8%;          /* hsl(217.2, 91.2%, 59.8%) */
-        --info-foreground: 255 5% 100%;     /* hsl(255, 5%, 100%) - White text */
+		/* INFO (Blue) - For general tips, active processing */
+		--info: 217.2 91.2% 59.8%; /* hsl(217.2, 91.2%, 59.8%) */
+		--info-foreground: 255 5% 100%; /* hsl(255, 5%, 100%) - White text */
 
-        --radius: 0.5rem;
-    }
+		--radius: 0.5rem;
+	}
 
-    .dark {
-        color-scheme: dark;
+	.dark {
+		color-scheme: dark;
 
-        /* SURFACES: Background is 5%, elevated cards bump UP to 10% */
-        --background: 255 10% 5%;           /* hsl(255, 10%, 5%) */
-        --card: 255 10% 10%;                /* hsl(255, 10%, 10%) */
-        --popover: 255 10% 10%;             /* hsl(255, 10%, 10%) */
+		/* SURFACES: Background is 5%, elevated cards bump UP to 10% */
+		--background: 255 10% 5%; /* hsl(255, 10%, 5%) */
+		--card: 255 10% 10%; /* hsl(255, 10%, 10%) */
+		--popover: 255 10% 10%; /* hsl(255, 10%, 10%) */
 
-        /* CONTENT: Highly legible light text */
-        --foreground: 255 10% 92%;          /* hsl(255, 10%, 92%) */
-        --card-foreground: 255 10% 92%;     /* hsl(255, 10%, 92%) */
-        --popover-foreground: 255 10% 92%;  /* hsl(255, 10%, 92%) */
+		/* CONTENT: Highly legible light text */
+		--foreground: 255 10% 92%; /* hsl(255, 10%, 92%) */
+		--card-foreground: 255 10% 92%; /* hsl(255, 10%, 92%) */
+		--popover-foreground: 255 10% 92%; /* hsl(255, 10%, 92%) */
 
-        /* MUTED/HIGHLIGHTS: Bumps UP to 16% for hover states to contrast against the 5% background */
-        --muted: 255 10% 16%;               /* hsl(255, 10%, 16%) */
-        --muted-foreground: 255 10% 70%;    /* hsl(255, 10%, 70%) */
-        --accent: 255 10% 16%;              /* hsl(255, 10%, 16%) */
-        --accent-foreground: 255 10% 92%;   /* hsl(255, 10%, 92%) */
+		/* MUTED/HIGHLIGHTS: Bumps UP to 16% for hover states to contrast against the 5% background */
+		--muted: 255 10% 16%; /* hsl(255, 10%, 16%) */
+		--muted-foreground: 255 10% 70%; /* hsl(255, 10%, 70%) */
+		--accent: 255 10% 16%; /* hsl(255, 10%, 16%) */
+		--accent-foreground: 255 10% 92%; /* hsl(255, 10%, 92%) */
 
-        /* BRAND: Vibrant purple remains unchanged */
-        --primary: 255 86% 63%;             /* hsl(255, 86%, 63%) */
-        --primary-foreground: 0 0% 100%;    /* hsl(0, 0%, 100%) - White text on purple button */
+		/* BRAND: Vibrant purple remains unchanged */
+		--primary: 255 86% 63%; /* hsl(255, 86%, 63%) */
+		--primary-foreground: 0 0% 100%; /* hsl(0, 0%, 100%) - White text on purple button */
 
-        --secondary: 255 10% 20%;           /* hsl(255, 10%, 20%) - Dark gray/purple secondary */
-        --secondary-foreground: 255 10% 92%;/* hsl(255, 10%, 92%) */
+		--secondary: 255 10% 20%; /* hsl(255, 10%, 20%) - Dark gray/purple secondary */
+		--secondary-foreground: 255 10% 92%; /* hsl(255, 10%, 92%) */
 
-        /* UTILITIES */
-        --border: 255 10% 20%;              /* hsl(255, 10%, 20%) */
-        --input: 255 10% 20%;               /* hsl(255, 10%, 20%) */
-        --ring: 255 86% 63%;                /* hsl(255, 86%, 63%) */
-        --destructive: 0 62.8% 30.6%;       /* hsl(0, 62.8%, 30.6%) - A deeper red to avoid eye strain */
-        --destructive-foreground: 0 0% 100%;/* hsl(0, 0%, 100%) - White text on red */
+		/* UTILITIES */
+		--border: 255 10% 20%; /* hsl(255, 10%, 20%) */
+		--input: 255 10% 20%; /* hsl(255, 10%, 20%) */
+		--ring: 255 86% 63%; /* hsl(255, 86%, 63%) */
+		--destructive: 0 62.8% 30.6%; /* hsl(0, 62.8%, 30.6%) - A deeper red to avoid eye strain */
+		--destructive-foreground: 0 0% 100%; /* hsl(0, 0%, 100%) - White text on red */
 
-        /* SUCCESS - Slightly desaturated for dark mode to avoid neon bleed */
-        --success: 142.1 70.6% 45.3%;       /* hsl(142.1, 70.6%, 45.3%) */
-        --success-foreground: 255 10% 92%;  /* hsl(255, 10%, 92%) */
+		/* SUCCESS - Slightly desaturated for dark mode to avoid neon bleed */
+		--success: 142.1 70.6% 45.3%; /* hsl(142.1, 70.6%, 45.3%) */
+		--success-foreground: 255 10% 92%; /* hsl(255, 10%, 92%) */
 
-        /* WARNING - Yellow remains bright, dark text remains mandatory */
-        --warning: 48 96% 53%;              /* hsl(48, 96%, 53%) */
-        --warning-foreground: 255 10% 10%;  /* hsl(255, 10%, 10%) */
+		/* WARNING - Yellow remains bright, dark text remains mandatory */
+		--warning: 48 96% 53%; /* hsl(48, 96%, 53%) */
+		--warning-foreground: 255 10% 10%; /* hsl(255, 10%, 10%) */
 
-        /* INFO - Standard dark mode blue */
-        --info: 217.2 91.2% 59.8%;          /* hsl(217.2, 91.2%, 59.8%) */
-        --info-foreground: 255 10% 92%;     /* hsl(255, 10%, 92%) */
-    }
+		/* INFO - Standard dark mode blue */
+		--info: 217.2 91.2% 59.8%; /* hsl(217.2, 91.2%, 59.8%) */
+		--info-foreground: 255 10% 92%; /* hsl(255, 10%, 92%) */
+	}
 }
 /* =========================================
       View Transitions API: Theme Ripple Setup
@@ -164,18 +165,21 @@
 /* for smooth scrolling to the section of the links  */
 @layer base {
 	html {
-		@apply bg-background text-foreground;
+		background-color: var(--color-background);
+		color: var(--color-foreground);
 		/* Ensure the HTML tag fills the screen even if content is short */
 		min-height: 100vh;
 		scroll-behavior: smooth;
-        scrollbar-color: hsl(var(--border)) hsl(var(--background));
-        scrollbar-width: thin;
-        overflow-x: hidden;
+		scrollbar-color: hsl(var(--border)) hsl(var(--background));
+		scrollbar-width: thin;
+		overflow-x: hidden;
 	}
 	/*automatically uses your theme's subtle divider color instead of defaulting to a harsh black line. for all bordered elements*/
-	* {
-        @apply border-border;
-    }
+	*,
+	::after,
+	::before {
+		border-color: var(--color-border);
+	}
 }
 
 ::view-transition-old(root),
