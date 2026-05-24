@@ -95,7 +95,7 @@
         --ring: 255 86% 63%;                /* hsl(255, 86%, 63%) - Focus rings match primary */
         --destructive: 0 84.2% 60.2%;       /* hsl(0, 84.2%, 60.2%) - A standard stark red */
         --destructive-foreground: 0 0% 100%;/* hsl(0, 0%, 100%) - White text on red */
-        
+
         /* SUCCESS (Green) - For confirmations, completed statuses */
         --success: 142.1 76.2% 36.3%;       /* hsl(142.1, 76.2%, 36.3%) */
         --success-foreground: 255 5% 100%;  /* hsl(255, 5%, 100%) - White text */
@@ -164,7 +164,7 @@
 /* for smooth scrolling to the section of the links  */
 @layer base {
 	html {
-		@apply bg-surface-main text-content-main;
+		@apply bg-background text-foreground;
 		/* Ensure the HTML tag fills the screen even if content is short */
 		min-height: 100vh;
 		scroll-behavior: smooth;
