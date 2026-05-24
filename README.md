@@ -15,6 +15,44 @@ this command is used to add the fonts
 bun add @fontsource/space-grotesk @fontsource/inter @fontsource/jetbrains-mono
 ```
 
+# 🛠️ Core Tech Stack
+
+  Framework: SvelteKit (Svelte 5 Snippets enabled)
+
+  Styling: Tailwind CSS v4
+
+  Typography: @fontsource (Inter, Space Grotesk, JetBrains Mono) natively mapped.
+
+  Icons: Lucide Svelte (Shadcn native)
+
+  Components: Shadcn-Svelte / Bits UI
+
+  Theme Switching: mode-watcher with custom CSS View Transitions (Ripple effect).
+
+  Scrolling: Lenis (Opt-in smooth scrolling via wrapper).
+
+# 🎨 Theming & Customization
+
+The entire design system is driven by src/app.css. You do not need to touch a single Shadcn component to change the look of the site.
+Changing the Brand Color
+
+Open src/app.css and locate the :root and .dark layers. Change the OKLCH values for --primary and --ring.
+
+```css
+/* Example: Changing from Purple to a vibrant Blue */
+:root {
+  --primary: oklch(0.6 0.15 250); 
+  --ring: oklch(0.6 0.15 250); 
+}
+```
+
+```bash
+bun x shadcn-svelte@latest add switch
+```
+
+```bash
+bun i @vercel/speed-insights
+```
 ```
 src/
 └── lib/
